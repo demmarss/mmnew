@@ -54,23 +54,23 @@ class Header extends Component {
                                         <tbody>
                                             <tr>
                                                 <th>Fajir</th>
-                                                <td> 4:15 am</td>
+                                                <td> 6:30 am</td>
                                             </tr>
                                             <tr>
                                                 <th>Dhuhr</th>
-                                                <td>2:00 pm</td>
+                                                <td>12:30 pm</td>
                                             </tr>
                                             <tr>
                                                 <th>Asr</th>
-                                                <td>6:00 pm</td>
+                                                <td>2:45 pm</td>
                                             </tr>
                                             <tr>
                                                 <th>Maghrib</th>
-                                                <td>9:25 pm</td>
+                                                <td>5:05 pm</td>
                                             </tr>
                                             <tr>
                                                 <th>Isha</th>
-                                                <td>10:45 pm</td>
+                                                <td>6:30 pm</td>
                                             </tr>
                                         </tbody>
                                     </table>
