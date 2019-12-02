@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Container, Hero, Columns, Image, Message, Button, Heading  } from "react-bulma-components/full";
+import {  Message } from "react-bulma-components/full";
 
 class ContactUs extends Component {
   

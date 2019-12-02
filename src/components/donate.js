@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Container, Hero, Columns, Heading, Level, Box, Button  } from "react-bulma-components/full";
+import { Heading, Level, Box, Button  } from "react-bulma-components/full";
 
 const style = { textAlign: 'center' };
     
@@ -9,18 +9,18 @@ class Donate extends Component {
     render() {
       return (
             
-            <div class="container donatePage">
+            <div className="container donatePage">
                 
                     
                 <Box>
-                <Heading class="title">
+                <Heading className="title">
                         Donate
                     </Heading>
                     <hr/>
                     <Level renderAs="nav">
                     <Level.Item style={style}>
                         <div>
-                        <Heading class="title is-4 has-text-info">
+                        <Heading className="title is-4 has-text-info">
                             GoFundMe
                         </Heading>
                         <br/>
@@ -29,7 +29,7 @@ class Donate extends Component {
                     </Level.Item>
                     <Level.Item style={style}>
                         <div>
-                        <Heading class="title is-4 has-text-info">
+                        <Heading className="title is-4 has-text-info">
                         GoFundMe
                         </Heading>
                         <br/>
@@ -38,7 +38,7 @@ class Donate extends Component {
                     </Level.Item>
                     <Level.Item style={style}>
                         <div>
-                        <Heading class="title is-4 has-text-info">
+                        <Heading className="title is-4 has-text-info">
                             Lunchgood
                         </Heading>
                         <br/>

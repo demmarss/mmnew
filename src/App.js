@@ -1,17 +1,22 @@
 import React from 'react';
 import HomePage from './components/homePage';
-import NavBar from './components/navBar';
 import FooterBar from './components/footer'
+import Admin from './components/admin'
+
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
 
 function App() {
   return (
-    <div>
-        {/* <NavBar /> */}
+    
+        
+        <Router>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/admin" component={Admin} />
 
-        <HomePage />
-
-        <FooterBar />
-    </div>
+          <FooterBar />
+        </Router>
+    
   );
 }
 

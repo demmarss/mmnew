@@ -2,17 +2,14 @@ import React, {Component} from 'react'
 import Header from './header'
 import MainProject from './mainProject'
 import Activities from './ourActivities'
-import Gallery from './gallery'
-import Donate from './donate'
 import AboutUs from './aboutUs'
-
 
 class HomePage extends Component {
 
-    render() {
+render() {
       return (
         <div>
-          <Header/>
+          <Header />
           <MainProject/>
           <Activities/>
           <AboutUs/>

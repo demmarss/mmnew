@@ -1,16 +1,14 @@
-import React, {Component} from 'react'
+import React, {Component } from 'react'
 import { Container, Hero, Columns, Image, Button  } from "react-bulma-components/full";
 import logoTransBg from "../images/logoTransBg.png"
 import '../css/headerStyle.css'; 
 import ContactUs from './contactUs'
 
+import { SolahTime } from './solahTime';
 
 class Header extends Component {
 
-
     render() {
-
-        let solahtime = ["4:15", "2:00", "6:00", "9:20", "10:45"]
 
       return (
         <div className="bg-img">
@@ -44,37 +42,7 @@ class Header extends Component {
                     <Container>
                             <Columns>
                                 <Columns.Column size="one-third">
-                                    
-                                    <table class="table" align="center">
-                                        <thead>
-                                            <tr class="is-selected">
-                                                <th colspan={2}>Salah Time</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th>Fajir</th>
-                                                <td> 6:30 am</td>
-                                            </tr>
-                                            <tr>
-                                                <th>Dhuhr</th>
-                                                <td>12:30 pm</td>
-                                            </tr>
-                                            <tr>
-                                                <th>Asr</th>
-                                                <td>2:45 pm</td>
-                                            </tr>
-                                            <tr>
-                                                <th>Maghrib</th>
-                                                <td>5:05 pm</td>
-                                            </tr>
-                                            <tr>
-                                                <th>Isha</th>
-                                                <td>6:30 pm</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                            
+                                    <SolahTime/>                                                
                                 </Columns.Column>
                                 <Columns.Column size="one-third">
                                     
