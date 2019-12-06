@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import {getSolahTime} from '../api'
+
 
 export class SolahTime extends Component {
 
@@ -7,10 +9,14 @@ export class SolahTime extends Component {
     }
 
     componentDidMount() {
-        fetch('http://localhost:3000/solarTimes/getSolahTime')
-          .then(response => response.json())
-          .then(data => this.setState({ data }));
+        this.fetchData()
       }
+
+    fetchData = async () => {
+        const data = await getSolahTime();
+        this.setState({ data })
+    };
+
 
     render(){
         

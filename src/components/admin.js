@@ -45,7 +45,7 @@ class Admin extends Component {
                     </div>
                     <div class="column">
                         <div>
-                            <input className="input" type="text" placeholder="Enter admin code" onChange={this.handleChange}/>
+                            <input className="input" type="text" value={this.state.code} placeholder="Enter admin code" onChange={this.handleChange}/>
 
                             {this.state.code !==""? <button className="button is-danger" onClick = {this.checkCode}>Submit</button>:null}
 

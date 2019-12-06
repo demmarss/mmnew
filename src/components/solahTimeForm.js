@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import axios from 'axios';
+import {createSolahTime} from '../api'
 
 export default class SolahTimeForm extends Component {
 
@@ -8,7 +8,8 @@ export default class SolahTimeForm extends Component {
         zuhurTime: "",
         asirTime: "",
         magribTime: "",
-        ishaTime: ""
+        ishaTime: "",
+        submit: false
     }
     
     handleChange = (e) => {
@@ -18,10 +19,15 @@ export default class SolahTimeForm extends Component {
     }
 
     updateSolahTime = () => {
-                
-        axios.post('http://localhost:3000/solarTimes/setSolahTime', this.state)
-        
-        this.forceUpdate();
+        createSolahTime(this.state)
+        this.setState({
+            fajirTime: "",
+            zuhurTime: "",
+            asirTime: "",
+            magribTime: "",
+            ishaTime: "",
+            submit: true
+        })
     }
     render(){
         
@@ -37,41 +43,46 @@ export default class SolahTimeForm extends Component {
                         <tr>
                             <th>Fajir</th>
                             <td>
-                                <input className="input" type="text" placeholder="Enter time" name="fajirTime" onChange={this.handleChange}/>
+                                <input className="input" type="text" placeholder="Enter time" value = {this.state.fajirTime} name="fajirTime" onChange={this.handleChange}/>
                                  am
                             </td>
                         </tr>
                         <tr>
                             <th>Dhuhr</th>
                             <td>
-                                <input className="input" type="text" placeholder="Enter time" name="zuhurTime" onChange={this.handleChange}/>
+                                <input className="input" type="text" placeholder="Enter time" value ={this.state.zuhurTime} name="zuhurTime" onChange={this.handleChange}/>
                                 pm
                             </td>
                         </tr>
                         <tr>
                             <th>Asr</th>
                             <td>
-                                <input className="input" type="text" placeholder="Enter time" name="asirTime" onChange={this.handleChange}/>
+                                <input className="input" type="text" placeholder="Enter time" value ={this.state.asirTime} name="asirTime" onChange={this.handleChange}/>
                                 pm
                             </td>
                         </tr>
                         <tr>
                             <th>Maghrib</th>
                             <td>
-                                <input className="input" type="text" placeholder="Enter time" name="magribTime" onChange={this.handleChange}/>
+                                <input className="input" type="text" placeholder="Enter time" value ={this.state.magribTime} name="magribTime" onChange={this.handleChange}/>
                                 pm
                             </td>
                         </tr>
                         <tr>
                             <th>Isha</th>
                             <td>
-                                <input className="input" type="text" placeholder="Enter time" name="ishaTime" onChange={this.handleChange}/>
+                                <input className="input" type="text" placeholder="Enter time" value ={this.state.ishaTime} name="ishaTime" onChange={this.handleChange}/>
                                 pm
                             </td>
                         </tr>
                     </tbody>
                 </table>
                 <button className="button is-danger" onClick = {this.updateSolahTime}>Submit</button>
+                {this.state.submit? <div>
+                    <div className="notification is-success">
+                        Solah time is submited successfully. 
+                    </div>
+                </div>:null}
             </div>
         )
     }
